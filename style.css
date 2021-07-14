@@ -1,0 +1,371 @@
+/* font input */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,700;1,600&display=swap');
+
+/* coustom style */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --mainColor: #2D25A0;
+    --secondColor: #E02C6D;
+    --otherColor: #2D25A0;
+    --pureColor: #fff;
+    --lightColor: #f2f2f2;
+    --darkPure: #888888;
+}
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+
+/* navbar style form here */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin-right: 25px;
+}
+
+nav ul li::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: var(--secondColor);
+    transition: all .3s ease-in;
+}
+
+nav ul li:hover::after {
+    width: 100%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--pureColor);
+}
+
+button {
+    padding: 5px 20px;
+    background-color: var(--secondColor);
+    color: var(--pureColor);
+    outline: none;
+    border: 2px solid var(--secondColor);
+    border-radius: 3px;
+    transition: all .2s ease-in;
+}
+
+button:hover {
+    background-color: transparent;
+}
+
+nav .login button i {
+    padding-right: 10px;
+}
+
+
+/*--------------------
+ home contant style from here 
+ --------------------------*/
+
+header {
+    background-color: var(--mainColor);
+    width: 100%;
+}
+
+.homeContant {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+    align-items: center;
+    overflow: hidden;
+}
+
+.homeContant .leftSite {
+    width: 50%;
+}
+
+.homeContant .leftSite h1 {
+    font-size: 55px;
+    font-weight: bold;
+    line-height: 70px;
+    color: var(--pureColor);
+}
+
+.homeContant .leftSite button {
+    margin-top: 16px;
+}
+
+.homeContant .rightSite h1 {
+    font-size: 60px;
+}
+
+
+/* main grid contant style form here */
+
+.container2 {
+    max-width: 70%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    margin: 0 auto;
+    grid-gap: 25px;
+}
+
+.grid-container .card {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 12px;
+    border-radius: 5px;
+    transition: all .4s ease;
+}
+
+.card:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px -01px 10px;
+}
+
+.card img {
+    border-radius: 5px;
+    width: 100%;
+}
+
+
+/* highlight copa america 2021 */
+
+.highlight {
+    margin: 60px 0;
+}
+
+.highlight .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.highlight .leftSite {
+    width: 48%;
+}
+
+.highlight .leftSite h1 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.highlight .leftSite p {
+    color: var(--darkPure)
+}
+
+.highlight .leftSite button {
+    margin: 25px 0;
+}
+
+.highlight .rightsite {
+    width: 48%;
+}
+
+.highlight .rightsite img {
+    border-radius: 5px;
+    width: 95%;
+}
+
+
+/* -------------------------
+sponser section start from here
+ -------------------------*/
+
+.sponser {
+    margin: 60px auto;
+}
+
+.sponser .container .sponser-company {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sponser .container img {
+    min-width: 200px;
+    margin-top: 30px;
+    width: 18%;
+    height: auto;
+    transition: all .3s ease;
+}
+
+.sponser .container img:hover {
+    transform: scale(1.1);
+}
+
+.sponser .container h1 {
+    font-size: 45px;
+}
+
+
+/* -------------------------
+footer section start here
+ -------------------------*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 60px 0;
+}
+
+.logoSec {
+    max-width: 35%;
+    margin-top: 30px;
+}
+
+.logoSec img {
+    width: 100%;
+    height: auto;
+}
+
+.socialIcon {
+    width: 40%;
+    height: auto;
+}
+
+.socialIcon img {
+    width: 8%;
+    height: auto;
+    margin-right: 10px;
+}
+
+
+/* -------------------------
+header "tablet" media quarey start here
+ -------------------------*/
+
+@media (max-width:1080px) {
+    .homeContant .leftSite {
+        width: 40%;
+    }
+    .homeContant .rightSite {
+        width: 40%;
+    }
+    .homeContant .rightSite img {
+        width: 100%;
+    }
+    .highlight .rightsite {
+        width: 50%;
+    }
+    .highlight .rightsite img {
+        width: 100%;
+    }
+}
+
+@media (max-width:850px) {
+    nav button {
+        background-color: var(--secondColor);
+        position: absolute;
+        top: 30px;
+        left: 5%;
+    }
+    nav ul {
+        display: none;
+    }
+    nav ul li {
+        margin: 15px 0;
+    }
+    header .bar {
+        position: absolute;
+        top: 30px;
+        right: 5%;
+        font-size: 25px;
+        color: white;
+    }
+    /* .homeContant */
+    .homeContant .rightSite {
+        width: 50%;
+    }
+    /* main section */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* .highlight */
+    .highlight .container {
+        flex-direction: column;
+        width: 90%;
+    }
+    .highlight .leftSite {
+        width: 90%;
+    }
+    .highlight .rightsite img {
+        width: 100%;
+    }
+    .highlight .rightsite {
+        width: 90%;
+    }
+    .leftSite {
+        width: 100%;
+    }
+    /* footer */
+    .logoSec {
+        max-width: 70%;
+    }
+    .socialIcon {
+        width: 100%;
+    }
+}
+
+@media (max-width:700px) {
+    .homeContant {
+        flex-direction: column;
+    }
+    .homeContant .rightSite {
+        width: 70%;
+        margin-top: 30px;
+    }
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    .container2 {
+        max-width: 90%;
+    }
+    /* sponser */
+    .sponser .container .sponser-company {
+        margin-left: 20%;
+    }
+    /* .highlight */
+    .highlight {
+        max-width: 100%;
+    }
+    .highlight .rightsite,
+    .leftSite {
+        width: 100%;
+    }
+    .logoSec {
+        max-width: 70%;
+    }
+    .socialIcon {
+        width: 100%;
+    }
+}

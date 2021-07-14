@@ -225,6 +225,11 @@ sponser section start from here
     font-size: 45px;
 }
 
+.highlight button:hover {
+    color: #000;
+    ;
+}
+
 
 /* -------------------------
 footer section start here

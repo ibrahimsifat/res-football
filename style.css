@@ -343,6 +343,13 @@ header "tablet" media quarey start here
 @media (max-width:700px) {
     .homeContant {
         flex-direction: column;
+        margin-left: -20px;
+    }
+    .homeContant .leftSite h1 {
+        font-size: 40px;
+    }
+    .homeContant .leftSite h1 br {
+        display: none;
     }
     .homeContant .rightSite {
         width: 70%;
